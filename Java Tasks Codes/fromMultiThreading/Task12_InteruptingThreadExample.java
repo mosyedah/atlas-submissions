@@ -1,0 +1,31 @@
+package fromMultiThreading;
+
+
+public class Task12_InteruptingThreadExample {
+
+
+static class InterruptibleThread extends Thread {
+    public void run() {
+        try {
+            while (!Thread.currentThread().isInterrupted()) {
+                System.out.println("Thread is running");
+                Thread.sleep(100);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thread was interrupted");
+        }
+    } 
+}
+    public static void main(String[] args) {
+        InterruptibleThread threa = new InterruptibleThread();
+        threa.start();
+
+        try {
+            Thread.sleep(500);
+            threa.interrupt();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
