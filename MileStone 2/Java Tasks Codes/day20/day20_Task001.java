@@ -1,4 +1,4 @@
-package javaBinding;
+package day20;
 
 public class day20_Task001 {
 	public class Student {
