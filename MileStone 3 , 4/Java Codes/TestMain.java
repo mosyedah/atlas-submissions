@@ -14,7 +14,7 @@ public class TestMain {
 	private static final String tableName  = "Students";
 	private static DynamoDbClient instance = DynamoDbClient.builder()
 			.endpointOverride(URI.create("https://dynamodb.ap-south-1.amazonaws.com")).region(Region.AP_SOUTH_1)
-			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create("AKIAQMEY6GLV774VKH6U", "EFOXmto+CMEB2jxNCX3DTWLLI0/s6GB1hyplanFv")))
+			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(" revoked ", " revoked")))
 			.build();
 
 	public static void main(String[] args) {
